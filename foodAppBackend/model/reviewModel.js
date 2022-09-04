@@ -16,7 +16,7 @@ let reviewSchema = new mongoose.Schema({
         default:Date.now
     },
     user:{
-        type:mongoose.Schema.ObjectId,
+        type:mongoose.Schema.ObjectId, 
         required:[true,"Review must belong to a user"],
         ref:"FoodUserModel"
     },
