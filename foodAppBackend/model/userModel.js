@@ -13,6 +13,15 @@ mongoose.connect(dbLink).then(() => {
 
 //how to create a scheme -> only entries written will be added to the db
 
+mongoose.connect(dbLink).then(function(){
+    console.log("connected");
+}).catch(function(err){
+    console.log("error",err);
+})
+
+
+//how to create a schema -> only entries written will be added to your db no one else.
+
 let userSchema = new Schema({
     name:{
         type:String,
